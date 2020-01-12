@@ -1,0 +1,2074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".stroke">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ssstudyID_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Study ID number" />
+
+            <EditText
+                android:id="@+id/ssstudyID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingBottom="10dp" />
+
+            <Button
+                android:id="@+id/simportdata"
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
+                android:text="Click to import data from Triage model"
+                android:textSize="18sp"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/sage_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Date of birth" />
+
+
+            <EditText
+                android:id="@+id/sage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:id="@+id/sdateofsymptomonset_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Date of symptom onset" />
+
+            <EditText
+                android:id="@+id/sdateofsymptomonset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date|textPersonName"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:id="@+id/stimeofsymptomsonset_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Time of symptom onset" />
+
+            <EditText
+                android:id="@+id/stimeofsymptomsonset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:id="@+id/sdateofarrival_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Date of arrival" />
+
+            <EditText
+                android:id="@+id/sdateofarrival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date|textPersonName"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:id="@+id/stimeofarrivaldate_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. Time of symptom onset" />
+
+            <EditText
+                android:id="@+id/stimeofarrivaldate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingBottom="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Demographic"
+                android:textAllCaps="true"
+                android:textColor="#009688"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/sgender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="7. Gender" />
+
+            <RadioGroup
+                android:id="@+id/sgendergroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sgender_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/sgender_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/female" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/spmhx_text"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:paddingBottom="4dp"
+                android:text="8. History of Cardiac, Blood, Malignant or Autoimmune Disorders, Head or Neck Trauma, Past/Family history of stroke" />
+
+            <RadioGroup
+                android:id="@+id/spmhxgroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/spmhx_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/spmhx_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ssudden_text"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:paddingBottom="4dp"
+                android:text="9. Sudden onset of symptoms" />
+
+            <RadioGroup
+                android:id="@+id/ssuddengroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/ssudden_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/ssudden_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/swoke_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="10. Woke with symptoms" />
+
+            <RadioGroup
+                android:id="@+id/swokegroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/swoke_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/swoke_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/simprove_text"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:paddingBottom="4dp"
+                android:text="11. Symptoms improving" />
+
+            <RadioGroup
+                android:id="@+id/simprovegroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/simprove_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/simprove_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/swellweekb4_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="12. Well in the week before presentation" />
+
+            <RadioGroup
+                android:id="@+id/swellweekb4group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/swellweekb4_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/swellweekb4_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/process"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Process"
+                android:textColor="#009688"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/sreferred_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="13. Referred by health professional" />
+
+            <RadioGroup
+                android:id="@+id/sreferredgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sreferred_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sreferred_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/shighcategory_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="14. Highcategory" />
+
+            <RadioGroup
+                android:id="@+id/shighcategorygroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/shighcategory_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/shighcategory_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/smedicaltransport_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="15. Transport to hospital by ambulance" />
+
+            <RadioGroup
+                android:id="@+id/smedicaltransportgroup"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/smedicaltransport_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/smedicaltransport_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+
+            <EditText
+                android:id="@+id/signs_title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Symptoms"
+                android:textColor="#009688"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/sheadace_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="16. Headace" />
+
+            <RadioGroup
+                android:id="@+id/sheadachegroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sheadache_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sheadache_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sphotophobiatext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="17. Photophobia" />
+
+            <RadioGroup
+                android:id="@+id/sphotophobiagroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sphotophobia_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sphotophobia_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sphonophobiatext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="18. Phonophobia (sensitivity to noise)" />
+
+            <RadioGroup
+                android:id="@+id/sphonophobiagroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sphonophobia_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sphonophobia_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/svomit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="19. Vomiting in the last 24 hours" />
+
+            <RadioGroup
+                android:id="@+id/svomitgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/svomit_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/svomit_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sdizzinesstext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="20. Dizziness" />
+
+            <RadioGroup
+                android:id="@+id/sdizzinessgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sdizziness_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sdizziness_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sspeechlosstext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="21. Speech disturbance" />
+
+            <RadioGroup
+                android:id="@+id/sspeechlossgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sspeechloss_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sspeechloss_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sfocalnumbtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="22. Focal numbness" />
+
+            <RadioGroup
+                android:id="@+id/sfocalnumbgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sfocalnumb_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sfocalnumb_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sfocalweak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="23. Focal weakness" />
+
+            <RadioGroup
+                android:id="@+id/sfocalweakgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sfocalweak_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sfocalweak_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sseizuretext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="24. Seizure" />
+
+            <RadioGroup
+                android:id="@+id/sseizuregroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sseizure_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sseizure_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/smentalstatetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="25. Altered mental status" />
+
+            <RadioGroup
+                android:id="@+id/smentalstategroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/smentalstate_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/smentalstate_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sloctext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="26. Loss_of_consciousness" />
+
+            <RadioGroup
+                android:id="@+id/slocgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sloc_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sloc_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/svisiontext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="27. Visual disurbance" />
+
+            <RadioGroup
+                android:id="@+id/svisiongroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/svision_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/svision_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sataxiatext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="28. Ataxia" />
+
+            <RadioGroup
+                android:id="@+id/sataxiagroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sataxia_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sataxia_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/svertigotext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="29. Vertigo" />
+
+            <RadioGroup
+                android:id="@+id/svertigogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/svertigo_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/svertigo_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sothertext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="30. Other" />
+
+            <RadioGroup
+                android:id="@+id/sothergroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sother_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sother_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/signs_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Signs"
+                android:textColor="#009688"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/spuplilstet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="31. Abnormal pupillary response" />
+
+            <RadioGroup
+                android:id="@+id/spupilsgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/spupils_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/spupils_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sseyeresponsetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="32. Eye response GCS eye opening" />
+
+            <RadioGroup
+                android:id="@+id/sseyeresponsegroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sseyeresponse1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No opening at any time, no interfering factor" />
+
+                <RadioButton
+                    android:id="@+id/sseyeresponse2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="After finger tip stimulus" />
+
+                <RadioButton
+                    android:id="@+id/sseyeresponse3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="After spoken or shouted request" />
+
+                <RadioButton
+                    android:id="@+id/seyeresponse4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Open before stimulus" />
+
+                <RadioButton
+                    android:id="@+id/sseyeresponseNT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Not Testable" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ssverbalresponsetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="33. Verbal response GCS Verbal response" />
+
+            <RadioGroup
+                android:id="@+id/ssverbalresponsegroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/ssverbalresponse1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No audible response, no interfering factor" />
+
+                <RadioButton
+                    android:id="@+id/ssverbalresponse2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Only moans / groans" />
+
+                <RadioButton
+                    android:id="@+id/ssverbalresponse3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Intelligible single words" />
+
+                <RadioButton
+                    android:id="@+id/ssverbalresponse4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Not orientated but communication coherently" />
+
+                <RadioButton
+                    android:id="@+id/ssverbalresponse5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Correctly gives name, place and date" />
+
+                <RadioButton
+                    android:id="@+id/ssverbalresponseNT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Not Testable" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ssmotorresponsetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="34. Motor response GCS motor response" />
+
+            <RadioGroup
+                android:id="@+id/ssmotorresponsegroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/ssmotorresponse1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No movement in arms / legs, no interfering factor" />
+
+                <RadioButton
+                    android:id="@+id/ssmotorresponse2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Extends arm at elbow"
+                    tools:text="Extends arm at elbow" />
+
+                <RadioButton
+                    android:id="@+id/ssmotorresponse3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bends arm at elbow, features clearly predominantly abnormal" />
+
+                <RadioButton
+                    android:id="@+id/ssmotorresponse4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bends arm at elbow rapidly but features not predominantly abnormal" />
+
+                <RadioButton
+                    android:id="@+id/ssmotorresponse5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Brings hand above clavicle to stimulus on head neck" />
+
+                <RadioButton
+                    android:id="@+id/ssmotorresponse6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Obey 2-part request" />
+
+                <RadioButton
+                    android:id="@+id/ssmotorresponseNT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Not Testable" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sconsciousness_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:paddingBottom="4dp"
+                android:text="35. PEDNIHSS Level of consciousness" />
+
+            <RadioGroup
+                android:id="@+id/sconsciousnessgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sconsciousness0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Alert"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/scousciousness1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Minor stimulation"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/scousciousness2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Repeated stimulation"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/scousciousness3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Responds only with reflex motor or autonomic effects or totally unresponsive, flaccid, areflexic"
+                    android:textSize="14sp"
+                    tools:text="Responds only with reflex motor or autonomic effects or totally unresponsive" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/slocquestion_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="36. PEDNIHSS level of conscious questions" />
+
+            <RadioGroup
+                android:id="@+id/slocquestiongroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/slocquestion0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Both correctly"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/slocquestion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="One correctly"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/slocquestion2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Neither correctly"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sloccommand_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="37. PEDNIHSS level of conscious command" />
+
+            <RadioGroup
+                android:id="@+id/sloccommandgroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sloccommand0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Both correctly"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sloccommand1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="One correctly"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sloccommand2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Neither correctly"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sbestgaze_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="38. PEDNIHSS abnormal eye movement (gaze palsy)" />
+
+            <RadioGroup
+                android:id="@+id/sbestgazegroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sbestgaze0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Normal"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sbestgaze1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Partial gaze palsy."
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sbestgaze2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Forced deviation"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/svisual_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="39. PEDNIHSS visual field defect" />
+
+            <RadioGroup
+                android:id="@+id/svisualgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/svisual0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No visual loss"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/svisual1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Partial hemianopia"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/svisual2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Complete hemianopia"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/svisual3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bilateral hemianopia"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sfacial_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="40. PEDNIHSS facial weakness" />
+
+            <RadioGroup
+                android:id="@+id/sfacialgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sfacial0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Normal symmetrical movement"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sfacial1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Minor paralysis"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sfacial2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Partial paralysis"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sfacial3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Complete paralysis of one or both sides "
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sleftarm_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="41. PEDNIHSS left arm weakness" />
+
+            <RadioGroup
+                android:id="@+id/sleftarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sleftarm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No drift"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sleftarm1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Drift"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sleftarm2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Some effort against gravity"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sleftarm3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No effort against gravity"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sleftarm4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No movement"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sleftarm5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Amputation"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/srightarm_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="42. PEDNIHSS right arm weakness" />
+
+            <RadioGroup
+                android:id="@+id/srightarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/srightarm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No drift"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/srightarm1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Drift"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/srightarm2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Some effort against gravity"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/srightarm3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No effort against gravity"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/srightarm4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No movement"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/srightarm5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Amputation"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sweakhandtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="43. Hand weakness" />
+
+            <RadioGroup
+                android:id="@+id/sweakhandgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sweakhand_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sweakhand_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sleftleg_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="44. PEDNIHSS left leg weakness" />
+
+            <RadioGroup
+                android:id="@+id/sleftleg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sleftleg0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No drift"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sleftleg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Drift"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sleftleg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Some effort against gravity"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sleftleg3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No effort against gravity"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sleftleg4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No movement"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sleftleg5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Amputation"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/srightleg_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="45. PEDNIHSS right leg weakness" />
+
+            <RadioGroup
+                android:id="@+id/srightleg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/srightleg0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No drift"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/srightleg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Drift"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/srightleg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Some effort against gravity"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/srightleg3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No effort against gravity"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/srightleg4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No movement"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/srightleg5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Amputation"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/slimbataxia_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="46. PEDNIHSS ataxia" />
+
+            <RadioGroup
+                android:id="@+id/slimbataxia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/slimbataxia0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Absent"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/slimbataxia1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Present in one limb"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/slimbataxia2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Present in two limbs"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/slimbataxia3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Not Testable"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ssensearmtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="47. Altered arm sensation" />
+
+            <RadioGroup
+                android:id="@+id/ssensearmgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/ssensearm_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/ssensearm_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ssenselegtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="48. Altered leg sensation" />
+
+            <RadioGroup
+                android:id="@+id/ssenseleggroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/ssenseleg_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/ssenseleg_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ssensefacetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="49. Altered facial sensation" />
+
+            <RadioGroup
+                android:id="@+id/ssenseface_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/ssenseface_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/ssenseface_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ssensory_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="50. PEDNIHSS sensory disturbance" />
+
+            <RadioGroup
+                android:id="@+id/ssensory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/ssensory0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Normal"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/ssensory1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mild to moderate sensory loss"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/ssensory2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Severe to total sensory loss"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/slanguage_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="51. PEDNIHSS best language" />
+
+            <RadioGroup
+                android:id="@+id/slanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/slanguage0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No aphasia, normal"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/slanguage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mild to moderate aphasia"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/slanguage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Severe aphasia"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/slanguage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mute, global aphasia"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sdysarthria_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="52. PEDNIHSS dysarthria" />
+
+            <RadioGroup
+                android:id="@+id/sdysarthriatext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sdysarthria0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Normal"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sdysarthria1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mild to moderate"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sdysarthria2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Severe"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sdysarthria3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Intubated or other physical barrier,"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sdyphasia_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="53. PEDNIHSS dyphasia" />
+
+            <RadioGroup
+                android:id="@+id/sdyphasiagroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sdyphasia0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Normal"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sdyphasia1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mild to moderate"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sdyphasia2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Severe"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sdyphasia3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Intubated or other physical barrier,"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/stextView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="54. PEDNIHSS sensory or visual neglect" />
+
+            <RadioGroup
+                android:id="@+id/sextinction_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sextinction0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No abnormality"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sextinction1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Visual, tactile, auditory, spatial, or personal inattention or extinction to bilateral simultaneous stimulation in one of the sensory modalities"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/sextinction2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Profound hemi-inattention or hemi-inattention to more than one modality"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ssensenegtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="55. Sensory neglects" />
+
+            <RadioGroup
+                android:id="@+id/ssenseneggroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/ssenseneg_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/ssenseneg_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/swalknotokcrf2text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="56. Unable to walk" />
+
+            <RadioGroup
+                android:id="@+id/swalknotokcrf2group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/swalknotokcrf2_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/swalknotokcrf2_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sother2text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="57. Other neurological signs including involuntary movements, abnomal reflexes orrpapilloedma" />
+
+            <RadioGroup
+                android:id="@+id/sother2group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/sother2_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/sother2_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/sbutton_stroke"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:text="Stroke Classification"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/seditText8"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:ems="10"
+                android:inputType="date" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
